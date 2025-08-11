@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串</title>
+
+    <script>
+        let str = "lyhll";
+        let str2 = 'LYHLL';
+        let msg = `你好，${str}`;
+        let arr = [1,2,3];
+        let arr2 = arr.join('-');
+        /*for..of*/
+        for(var num of arr){
+            console.log("for of"+ num);
+        }
+
+
+
+        /*forEach()*/
+        arr.forEach(function(item, index, array) {
+            console.log( item, index,  array);
+        });
+        arr.forEach((key,value)=>{
+            console.log(key,value);
+        })
+
+
+
+
+        console.log(arr2);
+        /*字符串不可变*/
+        console.log(msg);
+        console.log(msg.length);
+        console.log(msg.toUpperCase());/*大写转换*/
+        console.log(str2.toLowerCase());/*小写转换*/
+        console.log(msg.indexOf('l'));/*下标定位*/
+        console.log(msg.substring(1));/*substring(1)表示从第一个字符到最后一个；substring(m,n)从第m个到第n-1个字符*/
+        console.log(msg.substring(1,3));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
