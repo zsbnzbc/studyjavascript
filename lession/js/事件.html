@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #mouseMove{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+鼠标坐标：<apan id="mouseIndex"></apan>
+<div id="mouseMove">
+
+</div>
+
+<script>
+    $(function (){
+        $('#mouseMove').mousemove(function (e){
+            $('#mouseIndex').text('x='+e.pageX + 'y=' + e.pageY)
+        })
+    })
+</script>
+</body>
+</html>

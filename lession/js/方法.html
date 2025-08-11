@@ -4,79 +4,105 @@
     <meta charset="UTF-8">
     <title>发法</title>
 
-    <script>
-        'use strict';
-        var person = {
-            name : 'lyh',
-            birth : 2003,
-            age : getAge
-        }
-        // 对象和转字符串
-        var jsonPerson = JSON.stringify(person);
-        // json字符串转对象，
-        var obj = JSON.parse('{"name":"lyh","birth":2003}')
 
 
-        class Student{
-            constructor(name) {
-                this.name = name;
-            }
-            hello(){
-                alert('hello');
-            }
-        }
-        class xiaoStudent extends Student{
-            constructor(name,grade) {
-                super(name);
-                this.grade = grade;
-            }
-            myGrade(){
-                alert("我是GIAO, 成绩是" + this.grade);
-            }
-        }
-
-        var xiaoxuesheng = new xiaoStudent("GIAO",88);
-
-        var xiaoming = new Student("xiaoming");
-        var xiaomei = new Student("xiaomei");
-        xiaoming.hello();
-
-
-
-
-
-
-
-
-
-        function getAge(){
-            let now = new Date().getFullYear();
-            return now - this.birth;
-        }
-
-        getAge.apply(person,[]);
-
-        var now = new Date();
-        now.getFullYear(); //年
-        now.getMonth();  //月份0-11，所以具体用需要+1
-        now.getDate();  //日
-        now.getDay(); // 星期几
-        now.getHours(); //时分秒
-        now.getMinutes();
-        now.getSeconds();
-
-        now.getTime(); // 时间戳
-
-
-
-
-
-
-
-    </script>
 
 </head>
 <body>
+<div id="id1">
+
+
+</div>
+
+
+<script>
+    'use strict';
+
+    let id1 = document.getElementById('id1');
+
+  /*  console.log(id1);
+    id1.innerHTML("<strong>123</strong>");*/
+
+
+
+
+
+
+
+
+
+
+
+    var person = {
+        name : 'lyh',
+        birth : 2003,
+        age : getAge
+    }
+    // 对象和转字符串
+    var jsonPerson = JSON.stringify(person);
+    // json字符串转对象，
+    var obj = JSON.parse('{"name":"lyh","birth":2003}')
+
+
+    class Student{
+        constructor(name) {
+            this.name = name;
+        }
+        hello(){
+            alert('hello');
+        }
+    }
+    class xiaoStudent extends Student{
+        constructor(name,grade) {
+            super(name);
+            this.grade = grade;
+        }
+        myGrade(){
+            alert("我是GIAO, 成绩是" + this.grade);
+        }
+    }
+
+    var xiaoxuesheng = new xiaoStudent("GIAO",88);
+
+    var xiaoming = new Student("xiaoming");
+    var xiaomei = new Student("xiaomei");
+    // xiaoming.hello();
+
+
+
+
+
+
+
+
+
+    function getAge(){
+        let now = new Date().getFullYear();
+        return now - this.birth;
+    }
+
+    getAge.apply(person,[]);
+
+    var now = new Date();
+    now.getFullYear(); //年
+    now.getMonth();  //月份0-11，所以具体用需要+1
+    now.getDate();  //日
+    now.getDay(); // 星期几
+    now.getHours(); //时分秒
+    now.getMinutes();
+    now.getSeconds();
+
+    now.getTime(); // 时间戳
+
+
+
+
+
+
+
+</script>
+
+
 
 </body>
 </html>
